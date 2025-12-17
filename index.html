@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Analytics Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <div class="logo">📦 FLIPKART-STYLE ANALYTICS</div>
+                <h1>Sales Analytics Dashboard</h1>
+                <p>Real-time insights and comprehensive business intelligence</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="dateRange">📅 Date Range</label>
+                <select id="dateRange">
+                    <option value="7">Last 7 Days</option>
+                    <option value="30" selected>Last 30 Days</option>
+                    <option value="90">Last 90 Days</option>
+                    <option value="180">Last 6 Months</option>
+                    <option value="365">Last Year</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="category">🏷️ Category</label>
+                <select id="category">
+                    <option value="all">All Categories</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Home & Furniture">Home & Furniture</option>
+                    <option value="Mobiles">Mobiles & Accessories</option>
+                    <option value="Appliances">Appliances</option>
+                    <option value="Books">Books & Media</option>
+                    <option value="Sports">Sports & Fitness</option>
+                    <option value="Beauty">Beauty & Personal Care</option>
+                </select>
+            </div>
+
+            <button onclick="updateDashboard()">🔄 Refresh Dashboard</button>
+        </div>
+
+        <div class="metrics" id="metrics"></div>
+
+        <div class="insights-section">
+            <h2 style="color: #7b1fa2; font-size: 1.8em; margin-bottom: 20px;">💡 Business Insights</h2>
+            <div class="insights-grid" id="insights"></div>
+        </div>
+
+        <div class="charts-section">
+            <div class="chart-container">
+                <h2>📊 Revenue by Category</h2>
+                <div class="chart" id="categoryChart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h2>📈 Daily Sales Trend</h2>
+                <div class="chart" id="trendChart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h2>🏆 Top 10 Best Selling Products</h2>
+                <div class="table-container" id="topProducts"></div>
+            </div>
+
+            <div class="chart-container">
+                <h2>⭐ Product Category Performance</h2>
+                <div class="stats-grid" id="categoryStats"></div>
+            </div>
+
+            <div class="chart-container">
+                <h2>👥 Top Customer Segments</h2>
+                <div class="table-container" id="customerInsights"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/backend.js"></script>
+    <script src="js/frontend.js"></script>
+</body>
+</html>
